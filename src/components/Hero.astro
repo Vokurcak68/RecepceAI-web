@@ -27,7 +27,7 @@
         <a href="#funkce" class="btn-secondary">Prohlédnout funkce</a>
       </div>
 
-      <dl class="mt-12 grid max-w-md grid-cols-3 gap-6 animate-fade-up" style="animation-delay: 320ms">
+      <dl class="mt-12 grid max-w-md grid-cols-3 gap-6 text-center animate-fade-up" style="animation-delay: 320ms">
         <div>
           <dt class="font-display text-3xl font-bold text-gold-light">11</dt>
           <dd class="mt-1 text-sm text-white/60">jazyků</dd>
@@ -46,7 +46,7 @@
     <!-- Vizuál: stylizovaný kiosek s AI avatarem -->
     <div class="lg:col-span-6 lg:pl-8">
       <div class="relative mx-auto max-w-md animate-fade-up" style="animation-delay: 200ms">
-        <div class="animate-float rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.12] to-white/[0.04] p-5 shadow-2xl backdrop-blur">
+        <div class="hero-card rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.12] to-white/[0.04] p-5 shadow-2xl backdrop-blur">
           <!-- horní lišta -->
           <div class="flex items-center justify-between rounded-2xl bg-navy-900/60 px-4 py-3">
             <span class="flex items-center gap-2 text-sm font-semibold text-white/90">
@@ -93,3 +93,21 @@
     </svg>
   </div>
 </section>
+
+<style>
+  /* Jemné „plování" karty — animujeme `top` (ne transform), aby text
+     zůstal ostrý i během pohybu. (transform translateY rozmazává text
+     přes GPU kompozitor v mezisnímcích.) */
+  .hero-card {
+    position: relative;
+    top: 0;
+    animation: hero-bob 6s ease-in-out infinite;
+  }
+  @keyframes hero-bob {
+    0%, 100% { top: 0; }
+    50% { top: -10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-card { animation: none; }
+  }
+</style>
