@@ -9,10 +9,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "mailer": "node server/mailer.mjs",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.18"
+    "astro": "^4.16.18",
+    "dotenv": "^17.4.2",
+    "nodemailer": "^8.0.10"
   },
   "devDependencies": {
     "@astrojs/sitemap": "3.2.1",

@@ -35,14 +35,11 @@
       <form
         name="poptavka"
         method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        action="/dekujeme"
+        action="/api/contact"
         class="rounded-3xl bg-white/[0.04] p-7 shadow-2xl ring-1 ring-white/10 backdrop-blur"
       >
-        <input type="hidden" name="form-name" value="poptavka" />
-        <p class="hidden">
-          <label>Nevyplňujte: <input name="bot-field" /></label>
+        <p class="hidden" aria-hidden="true">
+          <label>Nevyplňujte: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
         </p>
 
         <div class="grid gap-5 sm:grid-cols-2">
