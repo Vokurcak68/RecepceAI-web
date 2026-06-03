@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Stránka nenalezena — ReceptionAI">
+  <Header />
+  <main class="flex min-h-[70vh] items-center justify-center bg-navy px-5 text-center text-white">
+    <div class="max-w-lg">
+      <p class="font-display text-7xl font-bold text-gold-light">404</p>
+      <h1 class="mt-4 text-3xl font-bold">Tato stránka tu není</h1>
+      <p class="mt-4 text-lg text-white/70">Zdá se, že jste zazvonili na neexistující pokoj. Vraťme se na recepci.</p>
+      <a href="/" class="btn-primary mt-8">🛎️ Zpět na hlavní stránku</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Děkujeme — ReceptionAI" description="Vaše poptávka byla odeslána.">
+  <Header />
+  <main class="flex min-h-[70vh] items-center justify-center bg-navy px-5 text-center text-white">
+    <div class="max-w-lg">
+      <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gold/15 text-4xl">🛎️</div>
+      <h1 class="mt-7 text-3xl font-bold sm:text-4xl">Děkujeme za poptávku!</h1>
+      <p class="mt-4 text-lg text-white/70">
+        Vaši zprávu jsme přijali. Ozveme se vám obvykle do jednoho pracovního dne
+        a domluvíme ukázku na míru vašemu provozu.
+      </p>
+      <a href="/" class="btn-primary mt-8">Zpět na hlavní stránku</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

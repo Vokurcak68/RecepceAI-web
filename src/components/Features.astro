@@ -1,0 +1,31 @@
+---
+import { features } from '../data/site';
+// Klíčové funkce (§7.3) — grid karet s ikonami
+---
+
+<section id="funkce" class="section bg-white">
+  <div class="container-tight">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Funkce</span>
+      <h2 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Vše, co recepce potřebuje — na jednom místě</h2>
+      <p class="mt-4 text-lg text-navy/65">
+        Rezervace, kiosek s AI, check-in, fakturace, CRM i úklid. Jeden systém místo deseti.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {features.map((f, i) => (
+        <article
+          class="reveal group rounded-2xl border border-navy/[0.06] bg-mist-light p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-white hover:shadow-card"
+          style={`transition-delay:${(i % 3) * 80}ms`}
+        >
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-2xl shadow-sm transition-colors group-hover:bg-gold/10">
+            {f.icon}
+          </div>
+          <h3 class="mt-5 text-lg font-bold text-navy">{f.title}</h3>
+          <p class="mt-2 text-[0.95rem] leading-relaxed text-navy/65">{f.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

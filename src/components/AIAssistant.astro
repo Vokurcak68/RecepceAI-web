@@ -1,0 +1,71 @@
+---
+// AI asistent & samoobsluha (§7.6) — výrazná highlight sekce
+const highlights = [
+  { icon: '🧠', title: 'Rozumějící asistent', desc: 'Odpoví na dotazy hostů, provede check-inem a poradí s pobytem.' },
+  { icon: '🧑‍💼', title: '3D avatar', desc: 'Lidská tvář recepce — přívětivá interakce na dotykovém kiosku.' },
+  { icon: '📞', title: 'Videohovor na recepci', desc: 'Když host potřebuje člověka, spojí se jedním klepnutím.' },
+  { icon: '🔔', title: 'Zvonek pro personál', desc: 'Přivolání obsluhy přímo z kiosku, kdykoli je potřeba.' },
+];
+---
+
+<section class="section bg-navy text-white">
+  <div class="container-tight grid items-center gap-14 lg:grid-cols-2">
+    <div class="reveal">
+      <span class="eyebrow !text-gold-light">AI asistent & samoobsluha</span>
+      <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Recepční, který mluví 11 jazyky a nikdy nemá pauzu</h2>
+      <p class="mt-5 text-lg text-white/70">
+        Srdcem ReceptionAI je samoobslužný kiosek s AI asistentem a 3D avatarem. Hosta uvítá v jeho
+        jazyce, provede ho check-inem a v případě potřeby okamžitě přivolá personál nebo spustí videohovor.
+      </p>
+
+      <div class="mt-9 grid gap-5 sm:grid-cols-2">
+        {highlights.map((h) => (
+          <div class="flex gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/5 text-2xl">{h.icon}</span>
+            <div>
+              <h3 class="font-semibold text-white">{h.title}</h3>
+              <p class="mt-1 text-sm text-white/60">{h.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 rounded-2xl border border-gold/20 bg-gold/[0.06] p-5">
+        <p class="text-sm text-white/80">
+          <span class="font-semibold text-gold-light">🧠 AI agenti</span> navíc dělají noční audit, ranní
+          briefing a návrhy cen z dat. Nevratné kroky vždy jen navrhnou ke schválení — rozhodnutí zůstává na vás.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stylizovaná konverzace -->
+    <div class="reveal" style="transition-delay:120ms">
+      <div class="mx-auto max-w-md rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur">
+        <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20 text-xl ring-2 ring-gold/30">🧑‍💼</span>
+          <div>
+            <p class="text-sm font-semibold">AI asistent</p>
+            <p class="text-xs text-emerald-300">● online · 11 jazyků</p>
+          </div>
+        </div>
+        <div class="mt-4 space-y-3 text-sm">
+          <div class="max-w-[80%] rounded-2xl rounded-tl-sm bg-white/10 px-4 py-2.5 text-white/85">
+            Dobrý den! Vítejte. Chtěli byste se ubytovat, nebo máte rezervaci?
+          </div>
+          <div class="ml-auto max-w-[80%] rounded-2xl rounded-tr-sm bg-gold px-4 py-2.5 text-navy">
+            Mám rezervaci na jméno Novák.
+          </div>
+          <div class="max-w-[85%] rounded-2xl rounded-tl-sm bg-white/10 px-4 py-2.5 text-white/85">
+            Našla jsem ji 👍 Pokoj 204, 2 noci. Provedu vás online check-inem — potrvá to minutku.
+          </div>
+          <div class="ml-auto max-w-[80%] rounded-2xl rounded-tr-sm bg-gold px-4 py-2.5 text-navy">
+            Můžeme pokračovat anglicky?
+          </div>
+          <div class="max-w-[85%] rounded-2xl rounded-tl-sm bg-white/10 px-4 py-2.5 text-white/85">
+            Of course — let's continue in English. 🇬🇧
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

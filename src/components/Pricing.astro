@@ -1,0 +1,82 @@
+---
+// Ceník (§7.9) — PLACEHOLDER. Konkrétní ceny zveřejnit jen po výslovném
+// schválení majitele (viz §9). Zde záměrně bez částek.
+const plans = [
+  {
+    name: 'Penzion',
+    tagline: 'Pro menší provozy a samoobsluhu',
+    points: ['1 provozovna', 'Kiosek + AI asistent', 'Online check-in', 'Rezervace a kalendář'],
+    featured: false,
+  },
+  {
+    name: 'Hotel',
+    tagline: 'Kompletní správa recepce',
+    points: ['Vše z Penzionu', 'Fakturace & pokladna', 'CRM + hodnocení', 'Napojení na OTA (iCal)', 'Úklid a údržba'],
+    featured: true,
+  },
+  {
+    name: 'Síť / Ubytovna',
+    tagline: 'Multi-tenant a firemní fakturace',
+    points: ['Vše z Hotelu', 'Více provozoven', 'Role a oddělená data', 'Faktury za období', 'UBYPORT a evidence'],
+    featured: false,
+  },
+];
+---
+
+<section id="cenik" class="section bg-mist-light">
+  <div class="container-tight">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Ceník</span>
+      <h2 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Cena podle velikosti provozu</h2>
+      <p class="mt-4 text-lg text-navy/65">
+        Modely za provozovnu a měsíčně. Konkrétní ceny připravujeme — ozvěte se a my vám
+        připravíme nabídku na míru.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      {plans.map((plan) => (
+        <div
+          class={`reveal flex flex-col rounded-3xl border bg-white p-8 transition-all duration-300 hover:-translate-y-1 ${
+            plan.featured
+              ? 'border-gold shadow-card-hover ring-1 ring-gold/40'
+              : 'border-navy/[0.07] shadow-card'
+          }`}
+        >
+          {plan.featured && (
+            <span class="mb-4 self-start rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold-dark">
+              Nejoblíbenější
+            </span>
+          )}
+          <h3 class="font-display text-2xl font-bold text-navy">{plan.name}</h3>
+          <p class="mt-1.5 text-sm text-navy/60">{plan.tagline}</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="font-display text-3xl font-bold text-navy/40">Na míru</span>
+          </div>
+          <p class="mt-1 text-xs text-navy/45">cena na vyžádání</p>
+
+          <ul class="mt-6 flex-1 space-y-3">
+            {plan.points.map((p) => (
+              <li class="flex items-start gap-2.5 text-navy/80">
+                <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/15 text-xs text-gold-dark">✓</span>
+                {p}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#kontakt"
+            class={`mt-8 ${plan.featured ? 'btn-primary' : 'btn-ghost'}`}
+          >
+            Nezávazná poptávka
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <p class="reveal mt-8 text-center text-sm text-navy/50">
+      * Ceník je orientační rozcestník. Finální podmínky stanovíme po krátké konzultaci k velikosti vašeho provozu.
+    </p>
+  </div>
+</section>

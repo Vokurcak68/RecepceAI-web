@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#243240"/>
+      <stop offset="1" stop-color="#16212d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#c8a35b" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#c8a35b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- zvonek -->
+  <g transform="translate(110 120)">
+    <path d="M0 56 a56 50 0 0 1 112 0 z" fill="#c8a35b"/>
+    <rect x="-12" y="56" width="136" height="14" rx="7" fill="#c8a35b"/>
+    <circle cx="56" cy="-2" r="10" fill="#c8a35b"/>
+  </g>
+
+  <text x="110" y="340" font-family="Georgia, serif" font-size="86" font-weight="700" fill="#ffffff">ReceptionAI</text>
+  <text x="112" y="410" font-family="Inter, Arial, sans-serif" font-size="38" fill="#c8a35b">Recepce, která nikdy nespí</text>
+  <text x="112" y="470" font-family="Inter, Arial, sans-serif" font-size="30" fill="#ffffff" opacity="0.7">Chytrá cloudová recepce · samoobsluha · AI · 11 jazyků</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="26" fill="#ffffff" opacity="0.85">
+    <text x="112" y="545">🏨 hotely</text>
+    <text x="320" y="545">🏡 penziony</text>
+    <text x="560" y="545">🏢 ubytovny</text>
+  </g>
+</svg>

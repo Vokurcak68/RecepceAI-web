@@ -1,0 +1,26 @@
+---
+import { languages } from '../data/site';
+// Vícejazyčnost (§7.7) — vlajky 11 jazyků
+---
+
+<section id="jazyky" class="section bg-mist-light">
+  <div class="container-tight">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Vícejazyčnost</span>
+      <h2 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Jeden systém, 11 jazyků</h2>
+      <p class="mt-4 text-lg text-navy/65">
+        Kiosek, portál hosta, e-maily i AI asistent — vše mluví jazykem vašich hostů.
+      </p>
+    </div>
+
+    <div class="reveal mt-12 flex flex-wrap justify-center gap-3">
+      {languages.map((lang) => (
+        <div class="flex items-center gap-2.5 rounded-full border border-navy/[0.07] bg-white px-5 py-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-card">
+          <span class="text-xl">{lang.flag}</span>
+          <span class="text-sm font-semibold text-navy">{lang.code}</span>
+          <span class="text-sm text-navy/50">{lang.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import { integrations } from '../data/site';
+// Integrace (§7.8) — Airbnb, Booking (iCal), e-mail (SMTP), WhatsApp
+const icons: Record<string, string> = {
+  Airbnb: '🏠',
+  'Booking.com': '🌐',
+  'E-mail (SMTP)': '✉️',
+  WhatsApp: '💬',
+};
+---
+
+<section id="integrace" class="section bg-white">
+  <div class="container-tight">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Integrace</span>
+      <h2 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Propojení s tím, co už používáte</h2>
+      <p class="mt-4 text-lg text-navy/65">
+        Synchronizace s OTA přes iCal, e-mailová komunikace i WhatsApp — bez ručního přepisování.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {integrations.map((it, i) => (
+        <div
+          class="reveal flex flex-col items-center rounded-2xl border border-navy/[0.06] bg-mist-light p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-white hover:shadow-card"
+          style={`transition-delay:${i * 70}ms`}
+        >
+          <span class="text-4xl">{icons[it.name] ?? '🔌'}</span>
+          <h3 class="mt-4 font-bold text-navy">{it.name}</h3>
+          <p class="mt-1.5 text-sm text-navy/60">{it.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

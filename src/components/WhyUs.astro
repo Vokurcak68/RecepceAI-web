@@ -1,0 +1,36 @@
+---
+// Reference / proč my (§7.11)
+const reasons = [
+  { icon: '🏨', title: 'Postaveno pro ubytování', desc: 'Ne univerzální nástroj — produkt řeší přesně procesy hotelů, penzionů a ubytoven.' },
+  { icon: '🔒', title: 'GDPR a evidence v pořádku', desc: 'UBYPORT, evidenční kniha a řízená retence dat. Žádná reálná data hostů na veřejnosti.' },
+  { icon: '🤝', title: 'Člověk má vždy poslední slovo', desc: 'AI navrhuje a šetří čas, ale nevratné kroky schvalujete vy.' },
+  { icon: '☁️', title: 'Cloud bez instalace', desc: 'Běží v prohlížeči i na kiosku. Aktualizace a zálohy řešíme za vás.' },
+];
+---
+
+<section class="section bg-mist-light">
+  <div class="container-tight">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Proč my</span>
+      <h2 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Spolehlivý partner pro vaši recepci</h2>
+    </div>
+
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {reasons.map((r, i) => (
+        <div class="reveal rounded-2xl bg-white p-7 shadow-card" style={`transition-delay:${i * 80}ms`}>
+          <span class="text-3xl">{r.icon}</span>
+          <h3 class="mt-4 font-bold text-navy">{r.title}</h3>
+          <p class="mt-2 text-sm text-navy/65">{r.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Pozn.: skutečné reference / loga klientů doplnit po schválení. -->
+    <div class="reveal mt-14 rounded-3xl border border-dashed border-navy/15 bg-white/50 p-8 text-center">
+      <p class="text-navy/60">
+        💬 Reference a hodnocení provozovatelů doplníme po nasazení u prvních klientů.
+        <a href="#kontakt" class="font-semibold text-gold-dark underline-offset-2 hover:underline">Chcete být mezi nimi?</a>
+      </p>
+    </div>
+  </div>
+</section>

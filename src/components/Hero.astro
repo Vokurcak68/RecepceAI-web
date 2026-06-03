@@ -1,0 +1,95 @@
+---
+// Hero — claim, podtitulek, dvě CTA a vizuál kiosku / 3D avatara (§7.1)
+---
+
+<section id="hero" class="relative overflow-hidden bg-navy text-white">
+  <!-- Pozadí: jemný gradient + zlaté světlo -->
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute -left-40 top-0 h-[36rem] w-[36rem] rounded-full bg-gold/10 blur-3xl"></div>
+    <div class="absolute -right-32 bottom-0 h-[30rem] w-[30rem] rounded-full bg-navy-700/40 blur-3xl"></div>
+    <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+  </div>
+
+  <div class="container-tight relative grid items-center gap-12 pb-24 pt-36 md:pb-32 md:pt-44 lg:grid-cols-12">
+    <div class="lg:col-span-6">
+      <span class="eyebrow !text-gold-light animate-fade-up">Chytrá cloudová recepce</span>
+      <h1 class="mt-5 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl animate-fade-up" style="animation-delay: 80ms">
+        Recepce, která
+        <span class="text-gold-light">nikdy nespí</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-white/75 animate-fade-up" style="animation-delay: 160ms">
+        Samoobsluha, AI a kompletní správa ubytování na jednom místě — ve 11 jazycích.
+        Kiosek s 3D avatarem, online check-in, rezervace, fakturace i CRM pro hotely,
+        penziony a ubytovny.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4 animate-fade-up" style="animation-delay: 240ms">
+        <a href="#kontakt" class="btn-primary">🛎️ Domluvit ukázku</a>
+        <a href="#funkce" class="btn-secondary">Prohlédnout funkce</a>
+      </div>
+
+      <dl class="mt-12 grid max-w-md grid-cols-3 gap-6 animate-fade-up" style="animation-delay: 320ms">
+        <div>
+          <dt class="font-display text-3xl font-bold text-gold-light">11</dt>
+          <dd class="mt-1 text-sm text-white/60">jazyků</dd>
+        </div>
+        <div>
+          <dt class="font-display text-3xl font-bold text-gold-light">24/7</dt>
+          <dd class="mt-1 text-sm text-white/60">samoobsluha</dd>
+        </div>
+        <div>
+          <dt class="font-display text-3xl font-bold text-gold-light">1</dt>
+          <dd class="mt-1 text-sm text-white/60">systém pro vše</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Vizuál: stylizovaný kiosek s AI avatarem -->
+    <div class="lg:col-span-6 lg:pl-8">
+      <div class="relative mx-auto max-w-md animate-fade-up" style="animation-delay: 200ms">
+        <div class="animate-float rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.12] to-white/[0.04] p-5 shadow-2xl backdrop-blur">
+          <!-- horní lišta -->
+          <div class="flex items-center justify-between rounded-2xl bg-navy-900/60 px-4 py-3">
+            <span class="flex items-center gap-2 text-sm font-semibold text-white/90">
+              <span class="text-lg">🛎️</span> Recepce
+            </span>
+            <span class="flex items-center gap-1.5 text-xs text-emerald-300">
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Online
+            </span>
+          </div>
+
+          <!-- 3D avatar -->
+          <div class="mt-4 flex flex-col items-center rounded-2xl bg-gradient-to-b from-gold/20 to-transparent p-6">
+            <div class="flex h-28 w-28 items-center justify-center rounded-full bg-gold/20 text-6xl ring-4 ring-gold/30">
+              🧑‍💼
+            </div>
+            <p class="mt-4 text-center text-sm text-white/80">„Dobrý den, ráda vás ubytuji. V jakém jazyce budeme pokračovat?"</p>
+            <div class="mt-3 flex flex-wrap justify-center gap-1.5 text-base">
+              <span>🇨🇿</span><span>🇬🇧</span><span>🇩🇪</span><span>🇺🇦</span><span>🇵🇱</span>
+            </div>
+          </div>
+
+          <!-- akční tlačítka kiosku -->
+          <div class="mt-4 grid grid-cols-2 gap-3">
+            <div class="rounded-xl bg-white/5 px-4 py-3 text-sm text-white/85">🛎️ Check-in</div>
+            <div class="rounded-xl bg-white/5 px-4 py-3 text-sm text-white/85">📅 Rezervace</div>
+            <div class="rounded-xl bg-white/5 px-4 py-3 text-sm text-white/85">📞 Videohovor</div>
+            <div class="rounded-xl bg-gold/90 px-4 py-3 text-sm font-semibold text-navy">🔔 Zvonit</div>
+          </div>
+        </div>
+
+        <!-- plovoucí štítek -->
+        <div class="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white px-4 py-3 shadow-card sm:block">
+          <p class="text-xs font-semibold text-navy">Online check-in hotov</p>
+          <p class="text-xs text-navy/50">za 90 sekund</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- vlna na přechod do světlé sekce -->
+  <div class="relative">
+    <svg class="block w-full text-mist-light" viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
+      <path d="M0,48 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+    </svg>
+  </div>
+</section>

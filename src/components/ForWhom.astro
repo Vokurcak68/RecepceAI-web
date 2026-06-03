@@ -1,0 +1,39 @@
+---
+import { segments } from '../data/site';
+// Pro koho (§7.5) — 3 segmenty
+---
+
+<section id="pro-koho" class="section bg-white">
+  <div class="container-tight">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Pro koho</span>
+      <h2 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Sedne hotelu, penzionu i ubytovně</h2>
+      <p class="mt-4 text-lg text-navy/65">Multi-tenant systém, který se přizpůsobí vašemu typu provozu.</p>
+    </div>
+
+    <div class="mt-14 grid gap-6 md:grid-cols-3">
+      {segments.map((s, i) => (
+        <div
+          class="reveal flex flex-col overflow-hidden rounded-3xl border border-navy/[0.06] bg-mist-light transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+          style={`transition-delay:${i * 90}ms`}
+        >
+          <div class="flex items-center gap-4 bg-navy p-7 text-white">
+            <span class="text-4xl">{s.icon}</span>
+            <h3 class="font-display text-2xl font-bold">{s.title}</h3>
+          </div>
+          <div class="flex flex-1 flex-col p-7">
+            <p class="text-navy/70">{s.desc}</p>
+            <ul class="mt-5 space-y-2.5">
+              {s.points.map((p) => (
+                <li class="flex items-center gap-2.5 text-navy/80">
+                  <span class="flex h-5 w-5 items-center justify-center rounded-full bg-gold/15 text-xs text-gold-dark">✓</span>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

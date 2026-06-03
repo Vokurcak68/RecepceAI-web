@@ -1,0 +1,44 @@
+---
+import { nav } from '../data/site';
+const year = 2026; // statický web — bez závislosti na běhovém datu
+---
+
+<footer class="bg-navy-900 text-white/70">
+  <div class="container-tight py-14">
+    <div class="grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <a href="#hero" class="flex items-center gap-2 text-lg font-bold text-white">
+          <span class="text-2xl">🛎️</span>
+          <span class="font-display">ReceptionAI</span>
+        </a>
+        <p class="mt-4 max-w-sm text-sm text-white/55">
+          Chytrá cloudová recepce pro hotely, penziony a ubytovny. Samoobsluha, AI asistent
+          a kompletní správa ubytování na jednom místě — ve 11 jazycích.
+        </p>
+      </div>
+
+      <div class="md:col-span-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white/40">Navigace</h3>
+        <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
+          {nav.map((item) => (
+            <li><a href={item.href} class="transition-colors hover:text-gold-light">{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white/40">Kontakt</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="mailto:info@recepceai.cz" class="hover:text-gold-light">info@recepceai.cz</a></li>
+          <li>recepceai.cz</li>
+          <li><a href="/gdpr" class="hover:text-gold-light">Zásady ochrany údajů</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">
+      <p>© {year} ReceptionAI. Všechna práva vyhrazena.</p>
+      <p>Recepce, která nikdy nespí. 🛎️</p>
+    </div>
+  </div>
+</footer>

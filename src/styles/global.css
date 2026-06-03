@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-mist-light text-navy-text antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-tight {
+    @apply container max-w-6xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-gold text-navy shadow-card hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-card-hover;
+  }
+  .btn-secondary {
+    @apply btn border border-white/30 bg-white/5 text-white hover:bg-white/15;
+  }
+  .btn-ghost {
+    @apply btn border border-navy/15 bg-white text-navy hover:border-gold hover:text-gold-dark;
+  }
+  .eyebrow {
+    @apply inline-block text-sm font-semibold uppercase tracking-[0.18em] text-gold-dark;
+  }
+  .section {
+    @apply py-20 md:py-28;
+  }
+}
+
+/* Jemné odhalování sekcí při scrollu */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
